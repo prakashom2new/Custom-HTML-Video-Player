@@ -1,8 +1,10 @@
- 
-<html>
+ <html>
 
-  <head> 
-    
+  <head lang="eng"> 
+    <meta charset="UTF-8">
+	<meta name="description" content="Customs HTML video player">
+	<meta name="keywords" content="video player,html player,media player">
+	
     <title>Customs HTML5 video player</title>
     
     <link href="CusVideoPlayer.css" type="text/css" rel="stylesheet" />
@@ -13,12 +15,29 @@
   <body>
   
     <div id="videoPlayer">
-      <video id="vid" controls>
-        <source src="Contents/Footage2.mp4">
-      </video>
-      
-      <button id="playPauseBtn" type="button">Play</button>  
-     </div>
+		<video id="vid">
+			<source src="Contents/Footage2.mp4">
+		</video>
+		
+		<div id="playerControls">
+			<button id="playPauseBtn" type="button"></button>
+			
+			<div id="curTimeLabel">0.00</div>
+			
+			<input id="slider" type="range" min="0" max="100" step="1">
+			
+			<div id="videoDurLabel">0.00</div>
+			
+			<button id="volumeBtn" type="button"></button>
+			<div id="muteAndSlider">
+				<button id="muteBtn" type="button"></button>
+				<input id="volumeSlider" type="range" min="0" max="1" step="0.1">
+			</div>
+			
+			<button id="fullscreenBtn" type="button"></button>
+		</div>
+		
+	</div>
   
   </body>
 

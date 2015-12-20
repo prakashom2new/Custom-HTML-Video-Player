@@ -1,12 +1,104 @@
 #videoPlayer { 
 	width: 920px; 
-	height: 485px;
+	height: 480px;
 	 
 	margin-left: auto; 
 	margin-right: auto; 
 	
 	position: relative;
+	
+	background-color: black;
 } 
-#vid { width: 920px; height: 480px; }
+#vid { width: 100%; height: 100%; } /* video */
 
-#playPauseBtn { width: 50px; height: 25px; position: absolute; bottom: -20px; left: 40px; }
+/************ video player controls **********/
+#playerControls { 
+	width: 80%; 
+	height: 50px; 
+	
+	position: absolute; 
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+	background-color: rgba(250, 250, 250, 0.9); 
+}
+#playPauseBtn, #slider, #volumeBtn, #fullScreenBtn, #curTimeLabel, #videoDurLabel 
+{ position: absolute; top: 50%; transform: translate(0, -50%); } 
+
+#playPauseBtn { 
+	width: 5%; 
+	height: 50px; 
+	left: 1%; 
+	
+	background: url("Contents/Buttons/playBtn.png") no-repeat center; 
+	background-size: 30px;
+	
+	border: none;
+}
+
+#curTimeLabel { width: 5%; height: 20px; left: 7%; }
+
+#slider { width: 70%; height: 25px; left: 11%; }
+
+#videoDurLabel { width: 2.5%; height: 20px; left: 83%; }
+
+#volumeBtn { 
+	width: 5%; 
+	height: 50px; 
+	left: 87.5%; 
+	
+	background: url("Contents/Buttons/volumeBtn.png") no-repeat center; 
+	background-size: 30px;
+	
+	border: none;
+}
+#muteAndSlider { width: 25%; height: 50px; position: relative; left: 75%; top: -50px; background-color: white; }
+#muteBtn, #volumeSlider { position: absolute; top: 50%; transform: translate(0, -50%); }
+#muteBtn { 
+	width: 20%; 
+	height: 50px; 
+	left: 5%; 
+	
+	background: url("Contents/Buttons/volumeBtn.png") no-repeat center; 
+	background-size: 30px;
+	
+	border: none;
+}
+#volumeSlider { width: 60%; height: 25px; right: 5%; }
+
+#fullScreenBtn { 
+	width: 5%; 
+	height: 50px; 
+	left: 93%; 
+	
+	background: url("Contents/Buttons/fullscrnBtn.png") no-repeat center; 
+	background-size: 30px;
+	
+	border: none;
+}
+
+input[type="range"] {
+	-webkit-appearance: none !important;
+	background: #444;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	
+	background: rgb(200, 200, 200);
+	height: 15px;
+	width: 15px;
+	border-radius: 100%;
+}
+input[type="range"]::-ms-track {
+	appearance: none !important;
+}
+input[type="range"]::-ms-thumb {
+	appearance: none !important;
+}
+input[type="range"]::-moz-range-track {
+	appearance: none !important;
+}
+input[type="range"]::-moz-range-thumb {
+	appearance: none !important;
+}
